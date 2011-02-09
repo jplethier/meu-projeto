@@ -1,2 +1,16 @@
 <h1>Novo Cadastro</h1>
+<%= form_for(@user) do |f| %>
+    <div class="field">
+        <%= f.label :nome %>
+        <%= f.text_field :nome %>
+    </div>
+    <div class="field">
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+    </div>
+    <div class="field">
+        <%= f.label :senha %>
+        <%= f.password_field :senha %>
+    </div>
+<% end %>
 
