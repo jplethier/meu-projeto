@@ -15,7 +15,7 @@ class UsersController < ApplicationController
         else
             @title = "Cadastro de Usuário"
             render 'novocadastro'
-            @user.password = params[:user][:password]
+            @user.senha = params[:user][:senha]
         end
     end
 

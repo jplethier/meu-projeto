@@ -1,16 +1,23 @@
 <h1>Novo Cadastro</h1>
 <%= form_for(@user) do |f| %>
     <div class="field">
-        <%= f.label :nome %>
+        <%= f.label :nome %><br/>
         <%= f.text_field :nome %>
     </div>
     <div class="field">
-        <%= f.label :email %>
+        <%= f.label :email %><br/>
         <%= f.text_field :email %>
     </div>
     <div class="field">
-        <%= f.label :senha %>
+        <%= f.label :senha %><br/>
         <%= f.password_field :senha %>
+    </div>
+    <div class="field">
+        <%= f.label "Confirmação de Senha" %><br/>
+        <%= f.password_field :senha_confirmation %>
+    </div>
+    <div class="actions">
+        <%= f.submit "Confirmar" %>
     </div>
 <% end %>
 
