@@ -1,20 +1,21 @@
 <h1>Novo Cadastro</h1>
 <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages', :object => f.object %>
     <div class="field">
-        <%= f.label :nome %><br/>
-        <%= f.text_field :nome %>
+        <%= f.label :name %><br/>
+        <%= f.text_field :name %>
     </div>
     <div class="field">
         <%= f.label :email %><br/>
         <%= f.text_field :email %>
     </div>
     <div class="field">
-        <%= f.label :senha %><br/>
-        <%= f.password_field :senha %>
+        <%= f.label :password %><br/>
+        <%= f.password_field :password %>
     </div>
     <div class="field">
-        <%= f.label "Confirmação de Senha" %><br/>
-        <%= f.password_field :senha_confirmation %>
+        <%= f.label :password_confirmation %><br/>
+        <%= f.password_field :password_confirmation %>
     </div>
     <div class="actions">
         <%= f.submit "Confirmar" %>

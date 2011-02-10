@@ -11,11 +11,11 @@ class UsersController < ApplicationController
         if @user.save
 #            sign_in @user  
             flash[:success] = "Cadastro efetuado com sucesso!"
-#            redirect_to @user
+            redirect_to @user
         else
             @title = "Cadastro de Usuário"
             render 'novocadastro'
-            @user.senha = params[:user][:senha]
+            @user.password = params[:user][:password]
         end
     end
 

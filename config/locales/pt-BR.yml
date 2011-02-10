@@ -1,0 +1,200 @@
+pt-BR:
+
+
+  # formatos de data e hora
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%d de %B de %Y"
+
+    day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+    order: [:day, :month, :year]
+
+  time:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M h"
+      short: "%d/%m, %H:%M h"
+      long: "%A, %d de %B de %Y, %H:%M h"
+    am: ''
+    pm: ''
+
+  # distancia do tempo em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: 'meio minuto'
+      less_than_x_seconds:
+        one: 'menos de 1 segundo'
+        other: 'menos de %{count} segundos'
+
+      x_seconds:
+        one: '1 segundo'
+        other: '%{count} segundos'
+
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de %{count} minutos'
+
+      x_minutes:
+        one: '1 minuto'
+        other: '%{count} minutos'
+
+      about_x_hours:
+        one: 'aproximadamente 1 hora'
+        other: 'aproximadamente %{count} horas'
+
+      x_days:
+        one: '1 dia'
+        other: '%{count} dias'
+
+      about_x_months:
+        one: 'aproximadamente 1 mês'
+        other: 'aproximadamente %{count} meses'
+
+      x_months:
+        one: '1 mês'
+        other: '%{count} meses'
+
+      about_x_years:
+        one: 'aproximadamente 1 ano'
+        other: 'aproximadamente %{count} anos'
+
+      over_x_years:
+        one: 'mais de 1 ano'
+        other: 'mais de %{count} anos'
+
+      almost_x_years:
+        one: 'quase 1 ano'
+        other: 'quase %{count} anos'
+
+    prompts:
+      year:   "Ano"
+      month:  "Mês"
+      day:    "Dia"
+      hour:   "Hora"
+      minute: "Minuto"
+      second: "Segundos"
+
+  # numeros
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'R$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 2
+        delimiter: '.'
+        significant: true
+        strip_unsignificant_zeros: true
+      # number_to_human_size()
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # number_to_human()
+      # new in rails 3: please add to other locales
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "mil"
+          million:
+            one: milhão
+            other: milhões
+          billion:
+            one: bilhão
+            other: bilhões
+          trillion:
+            one: trilhão
+            other: trilhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+
+  # Usado no Array.to_sentence
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+
+  # ActiveRecord
+  activerecord:
+    attributes:
+      user:
+        email: 'E-mail:'
+        password: 'Senha:'
+        password_confirmation: 'Confirmação de Senha:'
+        current_password: 'Senha atual:'
+        name: 'Nome:'
+    errors:
+        template:
+            body: "Estes são os problemas que precisam ser corrigidos:"
+            header:
+                one: "1 erro impediu o envio de seus dados!"
+                other: "%{count} erros impediram o envio de seus dados!"
+        messages:
+            taken: "Já está em uso"
+
+  errors:
+    template:
+        header:
+            one: "Não foi possível gravar %{model}: 1 erro"
+            other: "Não foi possível gravar %{model}: %{count} erros."
+            body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+    messages:
+        inclusion: "não está incluído na lista"
+        exclusion: "não está disponível"
+        invalid: "Valor inválido"
+        confirmation: "As senhas não conferem. Digite novamente."
+        empty: "não pode ficar vazio"
+        blank: "Preenchimento obrigatório"
+        too_long: "Muito longo (máximo: %{count} caracteres)"
+        too_short: "Deve ter no mínimo %{count} caracteres."
+        wrong_length: "não possui o tamanho esperado (%{count} caracteres)"
+        taken: "Já está em uso"
+        record_invalid: "A validação falhou: %{errors}"
+
+  models:
+        user:
+          attributes:
+            name:
+              invalid: "Este não é um nome válido"
+              blank: "É necessário informar um nome"
+            email:
+              invalid: "Este não é um email válido"
+              blank: "É necessário informar um email"
+              taken: "Este email já foi utilizado por outro usuário"
+            password:
+              blank: "É necessário informar uma senha"
+              too_short: "A senha deve ter no mínimo 4 caracteres."
+              too_long: "A senha deve conter no máximo 8 caracteres"
+              confirmation: "As senhas não conferem. Digite novamente."
+  #simple_form
+  simple_form:
+    required:
+        mark: "* obrigatório"
+
