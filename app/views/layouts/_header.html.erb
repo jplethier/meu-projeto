@@ -1,6 +1,9 @@
 <header>
     <nav class="round">
         <ul>
+            <% if signed_in? %>
+                <li><%= current_user.email %></li>
+            <% end %>            
             <li><%= link_to "Página inicial", root_path %></li>
             <% if not signed_in? %>            
                 <li><%= form_for(:session, :url => sessions_path) do |f| %>
