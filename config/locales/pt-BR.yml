@@ -150,6 +150,10 @@ pt-BR:
         password_confirmation: 'Confirmação de Senha:'
         current_password: 'Senha atual:'
         name: 'Nome:'
+      oferta:
+        title: 'Título:'
+        price: 'Preço:'
+        description: 'Descrição:'
     errors:
         template:
             body: "Estes são os problemas que precisam ser corrigidos:"
