@@ -1,18 +1,28 @@
 .container {
-  width: 710px;
+    width: 1200px;
 }
 
 body {
-  background: #cff;
+    background: #cff;
+    padding-top: 15px;
 }
 
+/* Header */
 header {
-  padding-top: 20px;
+    text-align: right;
+    width: auto;
+    margin-bottom: 5px;
+    padding-top: 15px;
 }
+
+header nav {
+  float: none;
+}
+
 
 header img {
-  padding: 1em;
-  background: #fff;
+    padding: 1em;
+    background: #fff;
 }
 
 section {

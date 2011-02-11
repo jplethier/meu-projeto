@@ -4,9 +4,9 @@
             <li><%= link_to "Página inicial", root_path %></li>
             <% if not signed_in? %>            
                 <%= form_for(:session, :url => sessions_path) do |f| %>
-                    <div class="field"> <%= f.label :email %>  <%= f.text_field :email %></div>
-                    <div class="field"> <%= f.label :password %> <%= f.password_field :password %></div>
-                    <div class="actions"> <%= f.submit "Login" %> </div>
+                    <li class="field"> <%= f.label :email %>  <%= f.text_field :email %></li>
+                    <li class="field"> <%= f.label :password %> <%= f.password_field :password %></li>
+                    <li class="actions"> <%= f.submit "Login" %> </li>
                 <% end %>
             <% end %>
             <% if signed_in? %>
