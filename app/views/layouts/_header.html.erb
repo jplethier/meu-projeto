@@ -2,12 +2,15 @@
     <nav class="round">
         <ul>
             <li><%= link_to "Página inicial", root_path %></li>
-            <% if signed_in? %>            
+            <% if not signed_in? %>            
                 <%= form_for(:session, :url => sessions_path) do |f| %>
                     <div class="field"> <%= f.label :email %>  <%= f.text_field :email %></div>
                     <div class="field"> <%= f.label :password %> <%= f.password_field :password %></div>
                     <div class="actions"> <%= f.submit "Login" %> </div>
                 <% end %>
+            <% end %>
+            <% if signed_in? %>
+                <li><%= link_to "Sair", signout_path, :method => :delete %></li>
             <% end %>
         </ul>
     </nav>
