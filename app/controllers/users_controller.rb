@@ -43,6 +43,11 @@ class UsersController < ApplicationController
         end
     end
 
+    def index
+        @title = "Lista de Usuários"
+        @users = User.paginate(:page => params[:page])
+    end
+
     private
             def correct_user
                 @user = User.find(params[:id])

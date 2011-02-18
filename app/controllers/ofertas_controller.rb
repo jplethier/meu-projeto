@@ -2,13 +2,18 @@ class OfertasController < ApplicationController
 
     before_filter :authenticate, :only => [:create, :destroy]
 
+    def novaoferta
+        @oferta = Oferta.new
+        @title = "Cadastro de Oferta"
+    end
+
     def create
         @oferta  = current_user.ofertas.build(params[:oferta])
         if @oferta.save
             flash[:success] = "Oferta criada com sucesso!"
             redirect_to root_path
         else
-            render "pages/home"
+            render "novaoferta"
         end
     end
 

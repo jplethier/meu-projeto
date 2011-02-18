@@ -1,23 +1,9 @@
-<header>
     <nav class="round">
         <ul>
-            <li><%= link_to logo, root_path %></li>
             <% if signed_in? %>
                 <li><%= current_user.email %></li>
-            <% end %>            
-            <li><%= link_to "Página inicial", root_path %></li>
-            <% if not signed_in? %>            
-                <li><%= form_for(:session, :url => sessions_path) do |f| %>
-                    <li class="field"> <%= f.label :email %>  <%= f.text_field :email %></li>
-                    <li class="field"> <%= f.label :password %> <%= f.password_field :password %></li>
-                    <li class="actions"> <%= f.submit "Login" %> </li>
-                <% end %></li>
-            <% end %>
-            <% if signed_in? %>
-                <li><%= link_to "Perfil", current_user %></li>
                 <li><%= link_to "Configurações", edit_user_path(current_user) %></li>
                 <li><%= link_to "Sair", signout_path, :method => :delete %></li>
             <% end %>
         </ul>
     </nav>
-</header>

@@ -8,14 +8,18 @@
     </head>
     <body>
         <div class="container">
-            <%= render 'layouts/header' %>
+            <% if signed_in? %>
+                <%= render 'layouts/header' %><br/><br/> 
+            <% end %>
+            <%= link_to logo, root_path %>
+            <%= render 'layouts/menu' %>
             <section class="round">
                 <% flash.each do |key, value| %>
                     <%= content_tag(:div, value, :class => "flash #{key}") %>
                 <% end %> 
                 <%= yield %>
             </section>
-            <%= debug(params) if Rails.env.development? %>
+           <%= debug(params) if Rails.env.development? %>
         </div>
     </body>
 </html>
