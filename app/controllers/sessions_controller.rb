@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         else
             sign_in user
             flash[:success] = "Login efetuado com sucesso."
-            redirect_to user
+            redirect_back_or user
         end
     end
 

@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 class UsersController < ApplicationController
 
-    before_filter :authenticate, :only => [:edit]
+    before_filter :correct_user, :only => [:edit, :update]
+    before_filter :authenticate, :only => [:edit, :update]
 
     def edit
         @user = current_user

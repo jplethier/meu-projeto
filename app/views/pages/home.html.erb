@@ -1,4 +1,15 @@
-<h1>Meu Projeto</h1>
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="offer">Nova Oferta</h1>
+        <%= render 'shared/offer_form' %>
+      </td>
+     </tr>
+  </table>
+<% else %>
+<h1>DealWit.Me</h1>
 <p>
     <%= link_to "Cadastre-se agora!", novocadastro_path %>
 </p>
+<% end %>

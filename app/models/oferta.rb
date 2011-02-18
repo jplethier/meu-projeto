@@ -9,5 +9,6 @@ class Oferta < ActiveRecord::Base
                             :length => { :maximum => 15 }
     validates :description, :presence => true,
                             :length => { :maximum => 255 }
-    validates :price,       :presence => true
+    validates :price,       :presence => true,
+                            :numericality => true
 end

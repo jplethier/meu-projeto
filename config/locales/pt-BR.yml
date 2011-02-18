@@ -181,6 +181,7 @@ pt-BR:
         wrong_length: "não possui o tamanho esperado (%{count} caracteres)"
         taken: "Já está em uso"
         record_invalid: "A validação falhou: %{errors}"
+        not_a_number: "Não é um preço válido"
 
   models:
         user:
