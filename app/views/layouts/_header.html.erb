@@ -1,6 +1,7 @@
 <header>
     <nav class="round">
         <ul>
+            <li><%= link_to logo, root_path %></li>
             <% if signed_in? %>
                 <li><%= current_user.email %></li>
             <% end %>            
