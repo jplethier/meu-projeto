@@ -14,6 +14,7 @@
             <% end %>
             <% if signed_in? %>
                 <li><%= link_to "Perfil", current_user %></li>
+                <li><%= link_to "Configurações", edit_user_path(current_user) %></li>
                 <li><%= link_to "Sair", signout_path, :method => :delete %></li>
             <% end %>
         </ul>

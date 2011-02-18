@@ -1,7 +1,8 @@
 MeuProjeto::Application.routes.draw do
 
     resources :users
-    resources :sessions, :only => [:create, :destroy]    
+    resources :sessions, :only => [:create, :destroy]
+    resources :ofertas, :only => [:create, :destroy]
 
     match '/novocadastro',  :to => 'users#novocadastro'
     match '/signout', :to => 'sessions#destroy'
