@@ -11,4 +11,6 @@ class Oferta < ActiveRecord::Base
                             :length => { :maximum => 255 }
     validates :price,       :presence => true,
                             :numericality => true
+
+    default_scope :order => 'ofertas.created_at DESC'
 end
