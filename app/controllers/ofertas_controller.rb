@@ -10,7 +10,7 @@ class OfertasController < ApplicationController
     def create
         @oferta  = current_user.ofertas.build(params[:oferta])
         if @oferta.save
-            flash[:success] = "Oferta criada com sucesso!"
+            flash[:success] = "Oferta cadastrada com sucesso!"
             redirect_to root_path
         else
             render "novaoferta"
