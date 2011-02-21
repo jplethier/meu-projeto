@@ -1,6 +1,6 @@
 class Oferta < ActiveRecord::Base
 
-    attr_accessible :title, :description, :price, :link
+    attr_accessible :title, :description, :price, :link, :tipo
 
     belongs_to :user
 
@@ -12,6 +12,8 @@ class Oferta < ActiveRecord::Base
     validates :price,       :presence => true,
                             :numericality => true
     validates :link,        :presence => true
+    validates :tipo,        :presence => true
+                            
 
     default_scope :order => 'ofertas.created_at DESC'
 end
