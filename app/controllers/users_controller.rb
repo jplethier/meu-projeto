@@ -46,7 +46,7 @@ class UsersController < ApplicationController
 
     def index
         @title = "Lista de Usuários"
-        @users = User.paginate(:page => params[:page])
+        @users = User.order(:name).page(params[:page]).per(5)
     end
 
     private

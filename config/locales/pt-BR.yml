@@ -1,6 +1,5 @@
 pt-BR:
 
-
   # formatos de data e hora
   date:
     formats:
@@ -202,4 +201,8 @@ pt-BR:
   simple_form:
     required:
         mark: "* obrigatório"
-
+  views:
+    pagination:
+      previous: "&lt; Anterior "
+      next: "Próximo &gt;"
+      truncate: "..."

@@ -139,8 +139,8 @@ td.main {
 td.sidebar {
   width: 10%;
   padding: 1em;
-  vertical-align: top;
   background: #ffc;
+  vertical-align: top;
 }
 
 .profile img.gravatar {

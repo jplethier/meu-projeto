@@ -1,9 +1,11 @@
 <h1>All users</h1>
 
-<%= will_paginate %>
+<%= paginate @users %>
+
+<br/><br/>
 
 <ul class="users">
   <%= render @users %>
 </ul>
 
-<%= will_paginate %>
+
