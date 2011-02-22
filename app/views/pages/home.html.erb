@@ -1,10 +1,19 @@
 <% if signed_in? %>
-    <h1> Ofertas do dia </h1>
-    <% unless @ofertas.empty? %>
-        <table class="ofertas" summary="Ofertas">
-            <%= render @ofertas %>
-        </table>
-    <% end %>
+    <table>
+        <tr>
+            <td class="main">
+                <h1> Ofertas do dia </h1>
+                <% unless @ofertas.empty? %>
+                    <table class="ofertas" summary="Ofertas">
+                        <%= render @ofertas %>
+                    </table>
+                <% end %>
+            </td>
+            <td class="sidebar round">
+                <strong>Informática</strong>
+            </td>
+        </tr>
+    </table>
 <% else %>
     <h1>DealWit.Me</h1>
     <p>
