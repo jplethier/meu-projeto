@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     def home
         @title = "Página inicial"
         if signed_in?
-            @ofertas = Oferta.paginate(:page => params[:page])
+            @ofertas = Oferta.ofertas_do_dia
         end
     end
 
