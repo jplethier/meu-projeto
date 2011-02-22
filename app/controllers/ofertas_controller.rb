@@ -1,6 +1,6 @@
 class OfertasController < ApplicationController
 
-    before_filter :authenticate, :only => [:create, :destroy, :novaoferta]
+    before_filter :authenticate, :only => [:create, :destroy, :novaoferta, :index]
 
     def novaoferta
         @oferta = Oferta.new
@@ -18,6 +18,10 @@ class OfertasController < ApplicationController
     end
 
     def destroy
+    end
+
+    def index
+        @ofertas = Oferta.paginate(:page => params[:page])
     end
 
 end

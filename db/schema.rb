@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 320110219121213) do
     t.string   "title"
     t.integer  "user_id"
     t.string   "link"
-    t.string   "ofertas"
+    t.string   "tipo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

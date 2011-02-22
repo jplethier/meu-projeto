@@ -1,0 +1,6 @@
+<% unless @ofertas.empty? %>
+    <table class="ofertas" summary="Ofertas">
+        <%= render @ofertas %>
+    </table>
+    <%= will_paginate @ofertas %>
+<% end %>

@@ -6,7 +6,7 @@ class CreateOfertas < ActiveRecord::Migration
       t.string :title
       t.integer :user_id
       t.string :link
-      t.string :ofertas
+      t.string :tipo
 
       t.timestamps
     end

@@ -1,6 +1,5 @@
 <% if signed_in? %>
-
-    
+    <h1> Ofertas do dia </h1>
     <% unless @ofertas.empty? %>
         <table class="ofertas" summary="Ofertas">
             <%= render @ofertas %>
