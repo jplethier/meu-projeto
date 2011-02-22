@@ -10,17 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 320110219121214) do
+ActiveRecord::Schema.define(:version => 320110219121213) do
 
   create_table "ofertas", :force => true do |t|
     t.float    "price"
     t.string   "description"
     t.string   "title"
     t.integer  "user_id"
+    t.string   "link"
+    t.string   "ofertas"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "link"
-    t.string   "tipo"
   end
 
   create_table "users", :force => true do |t|

@@ -9,8 +9,9 @@ Metas:
         colocar uma lista todos os usuários(FEITO)
         no perfil do usuário ter a lista de ofertas dele(FEITO)
         (colocar o heroku redirecionando para o domínio do site)(FEITO)
-        colocar um tipo de oferta e colocar um menu com link para cada tipo
-        exibir a data e salvar a data corretamente
+        colocar um tipo de oferta(FEITO)
+        colocar um menu com link para cada tipo
+        exibir a data e salvar a data corretamente(FEITO - melhorar a forma de exibir a data, mostrar)
         colocar na página inicial somente as ofertas do dia
         criar um link para listar todas as ofertas
         criar algum filtro para busca de ofertas no link todas as ofertas
