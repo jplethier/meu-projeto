@@ -4,7 +4,11 @@ class PagesController < ApplicationController
     def home
         @title = "Página inicial"
         if signed_in?
-            @ofertas = Oferta.ofertas_do_dia
+            if params[:tipo]
+                @ofertas = Oferta.ofertas_do_dia.por_tipo(params[:tipo])
+            else
+                @ofertas = Oferta.ofertas_do_dia
+            end
         end
     end
 

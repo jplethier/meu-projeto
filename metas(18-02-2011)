@@ -15,6 +15,7 @@ Metas:
         colocar na página inicial somente as ofertas do dia(FEITO)
         criar um link para listar todas as ofertas(FEITO)
         criar algum filtro para busca de ofertas no link todas as ofertas
+        utilizar paginação com kaminari - ESTUDAR ISSO MAIS PARA FRENTE
 
     Planejamento e Acompanhamento:
         Definir ferramenta para acompanhamento do projeto

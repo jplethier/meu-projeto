@@ -17,5 +17,10 @@ class Oferta < ActiveRecord::Base
 
     default_scope :order     => 'ofertas.created_at DESC'
     scope :ofertas_do_dia,   where("created_at >= ?", Time.mktime(Time.now.year, Time.now.month, Time.now.day, 0, 0, 0))
+    scope :por_tipo
+
+    def self.por_tipo(tipo)
+        where("tipo = ?", tipo)        
+    end
 
 end

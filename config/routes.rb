@@ -7,6 +7,7 @@ MeuProjeto::Application.routes.draw do
     match '/novocadastro',  :to => 'users#novocadastro'
     match '/novaoferta',    :to => 'ofertas#novaoferta'
     match '/signout',       :to => 'sessions#destroy'
+    match '/:tipo',         :to => 'pages#home'
   
     # The priority is based upon order of creation:
     # first created -> highest priority.
