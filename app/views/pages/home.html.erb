@@ -3,7 +3,9 @@
         <tr>
             <td class="main">
                 <h1> Ofertas do dia </h1>
-                <% unless @ofertas.empty? %>
+                <% if @ofertas.empty? %>
+                    <span>Não há nenhuma oferta cadastrada hoje ainda!</span>
+                <% else %>
                     <table class="ofertas" summary="Ofertas">
                         <%= render @ofertas %>
                     </table>
