@@ -20,8 +20,13 @@ class OfertasController < ApplicationController
     def destroy
     end
 
-    def index
-        @ofertas = Oferta.paginate(:page => params[:page])
+    def todas_ofertas
+        if params[:tipo]
+           @ofertas = Oferta.paginate(:page => params[:page], :per_page => 20, :conditions => ["tipo = :tipo", {:tipo => params[:tipo]}])
+        else
+            @ofertas = Oferta.paginate(:page => params[:page], :per_page => 20)
+        end
     end
+
 
 end

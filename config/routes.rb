@@ -4,10 +4,12 @@ MeuProjeto::Application.routes.draw do
     resources :sessions, :only => [:create, :destroy]
     resources :ofertas
 
-    match '/novocadastro',  :to => 'users#novocadastro'
-    match '/novaoferta',    :to => 'ofertas#novaoferta'
-    match '/signout',       :to => 'sessions#destroy'
-    match '/:tipo',         :to => 'pages#home'
+    match '/novocadastro',         :to => 'users#novocadastro'
+    match '/novaoferta',           :to => 'ofertas#novaoferta'
+    match '/signout',              :to => 'sessions#destroy'
+    match '/ofertas_do_dia/:tipo', :to => 'pages#home'
+    match '/todas_ofertas',        :to => 'ofertas#todas_ofertas'
+    match '/todas_ofertas/:tipo',  :to => 'ofertas#todas_ofertas'
   
     # The priority is based upon order of creation:
     # first created -> highest priority.
