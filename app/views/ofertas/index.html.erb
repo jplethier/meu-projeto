@@ -1,8 +1,7 @@
 <% unless @ofertas.empty? %>
-    <% if @ofertas.size > 2 %>
-        <%= paginate @ofertas %><br/><br/>
-    <% end %>
+    <%= will_paginate @ofertas %>
     <table class="ofertas" summary="Ofertas">
         <%= render @ofertas %>
     </table>
+    <%= will_paginate @ofertas %>
 <% end %>

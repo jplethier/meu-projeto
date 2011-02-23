@@ -1,8 +1,8 @@
 <h1>All users</h1>
-
-<%= paginate @users %>
-
-<br/><br/>
+<% if @users.size > 30 %>
+    <%= paginate @users %>
+    <br/><br/>
+<% end %>
 
 <ul class="users">
   <%= render @users %>

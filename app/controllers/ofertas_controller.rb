@@ -21,7 +21,7 @@ class OfertasController < ApplicationController
     end
 
     def index
-        @ofertas = Oferta.page(params[:page]).per(2)
+        @ofertas = Oferta.paginate(:page => params[:page])
     end
 
 end
