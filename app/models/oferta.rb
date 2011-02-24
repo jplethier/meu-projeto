@@ -1,6 +1,8 @@
 class Oferta < ActiveRecord::Base
 
     attr_accessible :title, :description, :price, :link, :tipo
+    #composed_of :price_mask, :class_name => 'Dinheiro', :mapping => %w(price valor), 
+    #    :converter => Proc.new{|t|  Dinheiro.new(t.to_number)}
 
     belongs_to :user
 

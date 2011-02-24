@@ -5,6 +5,10 @@ gem 'sqlite3-ruby',         '1.2.5',        :require => 'sqlite3'
 gem 'gravatar_image_tag',   '1.0.0.pre2'
 gem 'will_paginate',        '3.0.pre2'
 gem 'kaminari'
+gem 'ezcrypto'
+gem 'json'
+gem 'cgi'
+gem 'base64'
 
 group :development do
   gem 'rspec-rails',        '2.3.0'

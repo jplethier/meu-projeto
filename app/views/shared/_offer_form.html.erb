@@ -1,3 +1,8 @@
+<script>
+$(function(){
+    $(".monetaria").maskMoney({decimal:",", thousands:"."});
+})
+</script>
 <%= form_for(@oferta) do |f| %>
     <%= render 'shared/error_messages', :object => f.object %>
     <div class="field">
