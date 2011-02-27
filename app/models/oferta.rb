@@ -1,8 +1,9 @@
 class Oferta < ActiveRecord::Base
 
-    attr_accessible :title, :description, :price, :link, :tipo
-    #composed_of :price_mask, :class_name => 'Dinheiro', :mapping => %w(price valor), 
-    #    :converter => Proc.new{|t|  Dinheiro.new(t.to_number)}
+    attr_accessible :title, :description, :link, :tipo, :price_mask
+
+    composed_of :price_mask, :class_name => "Dinheiro", :mapping => %w(price valor),
+        :converter => Proc.new{|valor|  Dinheiro.new(valor.to_number)}
 
     belongs_to :user
 
@@ -11,8 +12,6 @@ class Oferta < ActiveRecord::Base
                             :length => { :maximum => 255 }
     validates :description, :presence => true,
                             :length => { :maximum => 1500 }
-    validates :price,       :presence => true,
-                            :numericality => true
     validates :link,        :presence => true
     validates :tipo,        :presence => true
                             

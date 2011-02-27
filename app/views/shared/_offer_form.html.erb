@@ -8,8 +8,8 @@ $(function(){
     <div class="field">
         <%= f.label :title %>
         <%= f.text_field :title %> - 
-        <%= f.label "R$" %>
-        <%= f.text_field :price %>
+        <%= f.label :price_mask %>
+        <%= f.text_field :price_mask, :class => "monetaria" %>
     </div>
     <div class="field">
         <%= f.label :tipo %><br/>
