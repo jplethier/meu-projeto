@@ -10,11 +10,13 @@ Metas:
         no perfil do usuário ter a lista de ofertas dele(FEITO)
         (colocar o heroku redirecionando para o domínio do site)(FEITO)
         colocar um tipo de oferta(FEITO)
-        colocar um menu com link para cada tipo
+        colocar um menu com link para cada tipo(FEITO)
         exibir a data e salvar a data corretamente(FEITO - melhorar a forma de exibir a data, mostrar)
         colocar na página inicial somente as ofertas do dia(FEITO)
         criar um link para listar todas as ofertas(FEITO)
         criar algum filtro para busca de ofertas no link todas as ofertas
+        adicionar comentários as ofertas - um usuário pode comentar uma oferta, para isso é necessário criar uma tela onde será exibido os detalhes de cada oferta e seus comentários e avaliações
+        criar relaçao de amizade entre usuários
         utilizar paginação com kaminari - ESTUDAR ISSO MAIS PARA FRENTE
 
     Planejamento e Acompanhamento:
