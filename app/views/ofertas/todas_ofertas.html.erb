@@ -5,6 +5,11 @@
                 <% if @ofertas.empty? %>
                     <span>Não há nenhuma oferta cadastrada!</span>
                 <% else %>
+                    <% form_for
+                    <fieldset>
+                        <legend>Busca de Ofertas</legend>
+                        <%
+                    </fieldset>
                     <%= will_paginate @ofertas %>
                     <table class="ofertas" summary="Ofertas">
                         <%= render @ofertas %>
