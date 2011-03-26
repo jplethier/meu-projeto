@@ -1,15 +1,7 @@
 <fieldset>
-<legend><%= link_to oferta.title, oferta.link, :target => "_blank" %> - R$ <%= oferta.price_mask %></legend>
+<legend><%= link_to oferta.title, oferta %> - R$ <%= oferta.price_mask %></legend>
     <%= oferta.description %>
     <br/><br/>
     <%= oferta.created_at %>
-    <div class="addthis_toolbox addthis_default_style ">
-        <a href="oferta.link" class="addthis_button_compact">Share</a>
-        <span class="addthis_separator">|</span>
-        <a class="addthis_button_preferred_1"></a>
-        <a class="addthis_button_preferred_2"></a>
-        <a class="addthis_button_preferred_3"></a>
-        <a class="addthis_button_preferred_4"></a>
-    </div>
 
 </fieldset>

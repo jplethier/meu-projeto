@@ -28,5 +28,10 @@ class OfertasController < ApplicationController
         end
     end
 
+    def show
+        @oferta = Oferta.find(params[:id])
+        @title = @oferta.title
+    end
+
 
 end
