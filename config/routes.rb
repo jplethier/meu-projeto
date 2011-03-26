@@ -10,7 +10,6 @@ MeuProjeto::Application.routes.draw do
     match '/ofertas_do_dia/:tipo', :to => 'pages#home'
     match '/todas_ofertas',        :to => 'ofertas#todas_ofertas'
     match '/todas_ofertas/:tipo',  :to => 'ofertas#todas_ofertas'
-    match '/visualizar_oferta/:id',:to => 'ofertas#visualizar_oferta'
   
     # The priority is based upon order of creation:
     # first created -> highest priority.
