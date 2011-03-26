@@ -2,7 +2,9 @@ MeuProjeto::Application.routes.draw do
 
     resources :users
     resources :sessions, :only => [:create, :destroy]
-    resources :ofertas
+    resources :ofertas do
+        resources :comments
+    end
 
     match '/novocadastro',         :to => 'users#novocadastro'
     match '/novaoferta',           :to => 'ofertas#novaoferta'

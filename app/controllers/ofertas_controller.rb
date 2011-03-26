@@ -31,6 +31,8 @@ class OfertasController < ApplicationController
     def show
         @oferta = Oferta.find(params[:id])
         @title = @oferta.title + " - R$" + @oferta.price_mask.to_s
+        @comment = Comment.new
+        @comments = @oferta.comments
     end
 
 

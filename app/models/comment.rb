@@ -1,9 +1,10 @@
 class Comment < ActiveRecord::Base
 
-    attr_accessible :comment
+    attr_accessible :content, :oferta
+    attr_accessor :oferta
 
     belongs_to :user
-    has_one :oferta
+    belongs_to :oferta
 
     validates :user_id,     :presence => true
     validates :oferta_id,   :presence => true

@@ -8,10 +8,15 @@
                 <legend>Descrição</legend>
                 <%= @oferta.description %>
             </fieldset>
+            <%= render 'shared/comment_form' %>
+            <table class="comments" summary="Comentários">
+                <%= render @comments %>
+            </table>
         </td>
+        
         <td class="sidebar round">
             <strong>Tipo</strong> <%= @oferta.tipo %><br />
-            <strong>Link</strong> <%= @oferta.link %>
+            <strong>Link</strong> <%= link_to @oferta.link, @oferta.link, :target => "_blank" %>
         </td>
     </tr>
 </table>
