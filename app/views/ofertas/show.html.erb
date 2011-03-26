@@ -4,9 +4,14 @@
             <h1>
                 <%= @oferta.title %> - R$ <%= @oferta.price_mask %>
             </h1>
+            <fieldset>
+                <legend>Descrição</legend>
+                <%= @oferta.description %>
+            </fieldset>
         </td>
         <td class="sidebar round">
             <strong>Tipo</strong> <%= @oferta.tipo %><br />
+            <strong>Link</strong> <%= @oferta.link %>
         </td>
     </tr>
 </table>
