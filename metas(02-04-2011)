@@ -1,0 +1,30 @@
+Metas:
+
+desenvolvimento:
+
+    DEFINIR PÁGINA INICIAL DESLOGADO
+    colocar o form de cadastro na página inicial de login
+    colocar link para direcionar ao site onde é alterada a foto
+    melhorar a forma de exibir a data - dd/MM/yyyy
+    criar relaçao de amizade entre usuários
+    --
+    criar algum filtro para busca de ofertas nas listagens de ofertas
+    colocar o addthis para funcionar
+    se o addthis não funcionar da melhor maneira, procurar no twitter, facebook e google uma solução e pensar no addthis para frente
+    --
+    porcentagem de desconto - pode ser no titulo
+    
+design:
+
+    DEFINIR PÁGINA INICIAL DESLOGADO
+    definir e fazer o layout
+    --
+    utilizar paginação com kaminari - ESTUDAR ISSO MAIS PARA FRENTE
+
+documentação
+    
+    criar post de lançamento
+    criar alguns outros posts para terem guardados já
+    guia do usuário
+    --
+    blog para ir pro ar junto com o site

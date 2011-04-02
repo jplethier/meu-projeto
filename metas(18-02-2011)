@@ -1,7 +1,7 @@
 Metas:
 
     Desenvolvimento:
-        foto do usuário(gravatar)(FEITO - falta colocar depois um link para direcionar ao site onde é alterada a foto) 
+        foto do usuário(gravatar)(FEITO) 
         criação de ofertas pelo usuário(FEITO)
         lista de todas as ofertas ordenadas pela mais recente(FEITO)
         logo que o Claudio me mandou colocada na header(FEITO)
@@ -11,14 +11,11 @@ Metas:
         (colocar o heroku redirecionando para o domínio do site)(FEITO)
         colocar um tipo de oferta(FEITO)
         colocar um menu com link para cada tipo(FEITO)
-        exibir a data e salvar a data corretamente(FEITO - melhorar a forma de exibir a data, mostrar)
+        exibir a data e salvar a data corretamente(FEITO)
         colocar na página inicial somente as ofertas do dia(FEITO)
         criar um link para listar todas as ofertas(FEITO)
-        criar algum filtro para busca de ofertas no link todas as ofertas
         retirar os acentos das urls e do banco(FEITO)
         adicionar comentários as ofertas - um usuário pode comentar uma oferta, para isso é necessário criar uma tela onde será exibido os detalhes de cada oferta e seus comentários e avaliações(FEITO)
-        criar relaçao de amizade entre usuários
-        utilizar paginação com kaminari - ESTUDAR ISSO MAIS PARA FRENTE
 
     Planejamento e Acompanhamento:
         Definir ferramenta para acompanhamento do projeto
