@@ -15,7 +15,8 @@ Metas:
         colocar na página inicial somente as ofertas do dia(FEITO)
         criar um link para listar todas as ofertas(FEITO)
         criar algum filtro para busca de ofertas no link todas as ofertas
-        adicionar comentários as ofertas - um usuário pode comentar uma oferta, para isso é necessário criar uma tela onde será exibido os detalhes de cada oferta e seus comentários e avaliações
+        retirar os acentos das urls e do banco
+        adicionar comentários as ofertas - um usuário pode comentar uma oferta, para isso é necessário criar uma tela onde será exibido os detalhes de cada oferta e seus comentários e avaliações(FEITO)
         criar relaçao de amizade entre usuários
         utilizar paginação com kaminari - ESTUDAR ISSO MAIS PARA FRENTE
 

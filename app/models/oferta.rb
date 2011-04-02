@@ -15,7 +15,8 @@ class Oferta < ActiveRecord::Base
                             :length => { :maximum => 1500 }
     validates :link,        :presence => true
     validates :tipo,        :presence => true
-                            
+
+    before_save :ignorarAcentosTipo                            
 
     default_scope :order     => 'ofertas.created_at DESC'
     scope :ofertas_do_dia,   where("created_at >= ?", Time.mktime(Time.now.year, Time.now.month, Time.now.day, 0, 0, 0))
@@ -24,5 +25,11 @@ class Oferta < ActiveRecord::Base
     def self.por_tipo(tipo)
         where("tipo = ?", tipo)        
     end
+
+    private 
+        
+        def ignorarAcentosTipo
+            self.tipo = self.tipo.downcase.mb_chars.normalize(:kd).gsub(/[^a-z0-9\s\._]/n, '').to_s
+        end
 
 end
