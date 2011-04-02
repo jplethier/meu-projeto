@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Oferta < ActiveRecord::Base
 
     attr_accessible :title, :description, :link, :tipo, :price_mask
@@ -26,10 +27,22 @@ class Oferta < ActiveRecord::Base
         where("tipo = ?", tipo)        
     end
 
+    def tipos_de_oferta
+        {"beleza e saude" => "Beleza e Saúde", "celulares e telefones" => "Celulares e Telefones", "dvds e vds" => "DVDs e CDs",        
+         "eletrodomesticos" => "Eletrodomésticos", "eletronicos" => "Eletrônicos", "esportes e lazer" => "Esportes e Lazer", 
+         "informatica" => "Informática", "livros" => "Livros", "roupas e calcados" => "Roupas e Calçados", "viagens" => "Viagens"}
+    end
+
+    def tipo_string
+        tipos_de_oferta[self.tipo]
+    end
+
+
     private 
         
         def ignorarAcentosTipo
             self.tipo = self.tipo.downcase.mb_chars.normalize(:kd).gsub(/[^a-z0-9\s\._]/n, '').to_s
         end
+
 
 end
