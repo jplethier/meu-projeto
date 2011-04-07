@@ -1,6 +1,8 @@
     <nav class="round">
         <ul>
+            <!--
             <li><%= link_to "Página inicial", root_path %></li>
+            -->
             <% if not signed_in? %>            
                 <li><%= form_for(:session, :url => sessions_path) do |f| %>
                     <li class="field"> <%= f.label :email %>  <%= f.text_field :email %></li>

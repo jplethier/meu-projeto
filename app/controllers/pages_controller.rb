@@ -9,6 +9,8 @@ class PagesController < ApplicationController
             else
                 @ofertas = Oferta.ofertas_do_dia
             end
+        else
+            @user = User.new
         end
     end
 
