@@ -19,6 +19,7 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div>
+    <%= gravatar_for @user %><br/>
     <%= link_to "Altere sua foto", "http://pt.gravatar.com/profiles/edit/?noclose#your-images", :target => "_blank" %>
   </div>
   <div class="actions">

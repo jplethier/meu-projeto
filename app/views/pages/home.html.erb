@@ -28,7 +28,43 @@
     </table>
 <% else %>
     <h1>DealWit.Me</h1>
-    <p>
-        <%= link_to "Cadastre-se agora!", novocadastro_path %>
-    </p>
+    <table>
+        <tr>
+            <td class="main">
+                <p>
+                    <ul>
+                        <li>Quem somos?</li>
+                        <li>???Mais tópicos???</li>
+                    <ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="sidebar round">
+                <h1>Cadastre-se Aqui</h1>
+                <%= form_for(@user) do |f| %>
+                    <%= render 'shared/error_messages', :object => f.object %>
+                    <div class="field">
+                        <%= f.label :name %><br/>
+                        <%= f.text_field :name %>
+                    </div>
+                    <div class="field">
+                        <%= f.label :email %><br/>
+                        <%= f.text_field :email %>
+                    </div>
+                    <div class="field">
+                        <%= f.label :password %><br/>
+                        <%= f.password_field :password %>
+                    </div>
+                    <div class="field">
+                        <%= f.label :password_confirmation %><br/>
+                        <%= f.password_field :password_confirmation %>
+                    </div>
+                    <div class="actions">
+                        <%= f.submit "Confirmar" %>
+                    </div>
+                <% end %>
+            </td>
+        </tr>
+    </table>    
 <% end %>
