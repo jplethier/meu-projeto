@@ -2,6 +2,6 @@
 <legend><%= link_to oferta.title, oferta %> - R$ <%= oferta.price_mask %></legend>
     <%= oferta.description %>
     <br/><br/>
-    <%= oferta.created_at %>
+    Oferta criada em <%= oferta.created_at.strftime("%d de %B de %Y") %>
 
 </fieldset>

@@ -4,7 +4,7 @@ desenvolvimento:
 
     DEFINIR PÁGINA INICIAL DESLOGADO
     colocar o form de cadastro na página inicial de login(FOI COLOCADO, MAS FALTA MELHORAR E MUITO O DESIGN, SEPARANDO ESTE FORM DO RESTO DA PAGINA)
-    colocar link para direcionar ao site onde é alterada a foto
+    colocar link para direcionar ao site onde é alterada a foto(FEITO)
     melhorar a forma de exibir a data - dd/MM/yyyy
     criar relaçao de amizade entre usuários
     --

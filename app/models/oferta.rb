@@ -37,12 +37,10 @@ class Oferta < ActiveRecord::Base
         tipos_de_oferta[self.tipo]
     end
 
-
     private 
         
         def ignorarAcentosTipo
             self.tipo = self.tipo.downcase.mb_chars.normalize(:kd).gsub(/[^a-z0-9\s\._]/n, '').to_s
         end
-
 
 end

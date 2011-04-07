@@ -8,6 +8,7 @@
                 <legend>Descrição</legend>
                 <%= @oferta.description %>
             </fieldset>
+            Oferta criada no dia <%= @oferta.created_at.strftime("%d/%m/%Y") %><br/><br/>
             <%= render 'shared/comment_form' %>
             <table class="comments" summary="Comentários">
                 <%= render @comments %>
