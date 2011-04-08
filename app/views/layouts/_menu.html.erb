@@ -3,7 +3,8 @@
             <!--
             <li><%= link_to "Página inicial", root_path %></li>
             -->
-            <% if not signed_in? %>            
+            <% if not signed_in? %>
+                <li><%= link_to "Cadastre-se", novocadastro_path %></li>
                 <li><%= form_for(:session, :url => sessions_path) do |f| %>
                     <li class="field"> <%= f.label :email %>  <%= f.text_field :email %></li>
                     <li class="field"> <%= f.label "Senha" %> <%= f.password_field :password %></li>
