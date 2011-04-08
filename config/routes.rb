@@ -1,5 +1,6 @@
 MeuProjeto::Application.routes.draw do
 
+    resources :relations
     resources :users
     resources :sessions, :only => [:create, :destroy]
     resources :ofertas do
