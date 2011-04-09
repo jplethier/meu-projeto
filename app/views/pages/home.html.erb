@@ -27,20 +27,17 @@
         </tr>
     </table>
 <% else %>
-    <h1>DealWit.Me</h1>
-    <table>
-        <tr>
-            <td class="main">
+        
+        <h1>DealWit.Me</h1>
+            <div class="round esquerda">
                 <p>
                     <ul>
                         <li>Quem somos?</li>
                         <li>???Mais tópicos???</li>
                     <ul>
                 </p>
-            </td>
-        </tr>
-        <!--<tr>
-            <td class="sidebar round">
+            </div>
+            <div class="round direita">
                 <h1>Cadastre-se Aqui</h1>
                 <%= form_for(@user) do |f| %>
                     <%= render 'shared/error_messages', :object => f.object %>
@@ -64,7 +61,6 @@
                         <%= f.submit "Confirmar" %>
                     </div>
                 <% end %>
-            </td>
-        </tr>-->
-    </table>    
+            </div>
+        
 <% end %>
