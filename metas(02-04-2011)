@@ -3,10 +3,11 @@ Metas:
 desenvolvimento:
 
     DEFINIR PÁGINA INICIAL DESLOGADO
-    colocar o form de cadastro na página inicial de login(FOI COLOCADO, MAS FALTA MELHORAR E MUITO O DESIGN, SEPARANDO ESTE FORM DO RESTO DA PAGINA)
+    colocar o form de cadastro na página inicial de login(FEITO)
     colocar link para direcionar ao site onde é alterada a foto(FEITO)
-    melhorar a forma de exibir a data - dd/MM/yyyy
+    melhorar a forma de exibir a data - dd/MM/yyyy(FEITO)
     criar relaçao de amizade entre usuários
+    usuário permanecer logado por 30min
     --
     criar algum filtro para busca de ofertas nas listagens de ofertas
     colocar o addthis para funcionar
