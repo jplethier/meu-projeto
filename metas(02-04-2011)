@@ -18,7 +18,6 @@ desenvolvimento:
 design:
 
     DEFINIR PÁGINA INICIAL DESLOGADO
-    !!!colocar o form de cadastro na página inicial de login!!!
     definir e fazer o layout
     --
     utilizar paginação com kaminari - ESTUDAR ISSO MAIS PARA FRENTE

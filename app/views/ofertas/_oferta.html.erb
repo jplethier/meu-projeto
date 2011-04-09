@@ -2,6 +2,11 @@
 <legend><%= link_to oferta.title, oferta %> - R$ <%= oferta.price_mask %></legend>
     <%= oferta.description %>
     <br/><br/>
-    Oferta criada em <%= l oferta.created_at.to_date %>
+    Oferta criada em <%= l oferta.created_at.to_date %> por 
+                <% if current_user? oferta.user %>
+                    <%= link_to "mim", oferta.user %>
+                <%else%>
+                    <%= link_to oferta.user.name, oferta.user %>
+                <% end %>
 
 </fieldset>
