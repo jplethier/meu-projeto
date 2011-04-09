@@ -15,6 +15,13 @@
         <td class="sidebar round">
             <strong>Nome</strong> <%= @user.name %><br />
             <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+            <% if not current_user? @user %>
+                <%= form_for [@user, @relation] do |f| %>
+                    <div class="actions">
+                        <%= f.submit "Seguir ofertas deste usuário" %>
+                    </div>
+                <% end %>
+            <% end %>
         </td>
     </tr>
     

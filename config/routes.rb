@@ -1,7 +1,8 @@
 MeuProjeto::Application.routes.draw do
 
-    resources :relations
-    resources :users
+    resources :users do
+        resources :relations
+    end
     resources :sessions, :only => [:create, :destroy]
     resources :ofertas do
         resources :comments

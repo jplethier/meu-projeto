@@ -13,6 +13,11 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @ofertas = @user.ofertas.paginate(:page => params[:page])
         @title = @user.name
+        if not current_user? @user
+            @relation = Relation.new 
+            @relation.e_seguido = @user
+            @relation.segue = current_user
+        end
     end
     
     def novocadastro

@@ -5,8 +5,10 @@ class User < ActiveRecord::Base
     attr_accessor :password
     attr_accessible :name, :email, :password, :password_confirmation
 
-    has_many :ofertas, :dependent => :destroy
-    has_many :comments,:dependent => :destroy
+    has_many :ofertas,              :dependent => :destroy
+    has_many :comments,             :dependent => :destroy
+    has_many :seguidores,           :dependent => :destroy, :class_name => "Relation", :foreign_key => "e_seguido"
+    has_many :usuarios_seguidos,    :dependent => :destroy, :class_name => "Relation", :foreign_key => "segue"
 
     email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
