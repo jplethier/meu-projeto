@@ -37,7 +37,11 @@ class User < ActiveRecord::Base
     def has_password?(submitted_password)
         encrypted_password == encrypt(submitted_password)
     end
-
+    
+    def seguir(user)
+        self.usuarios_seguidos.build(:e_seguido => user)
+    end
+    
     private
 
         def encrypt_password
