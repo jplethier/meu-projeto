@@ -10,8 +10,8 @@
             <% end %>
             <% if signed_in? %>
                 <li><%= link_to "Perfil", current_user %></li>
-                <li><%= link_to "Ofertas do dia!", ofertas_do_dia_path %></li>
                 <li><%= link_to "Cadastrar Oferta",  novaoferta_path %></li>
+                <li><%= link_to "Ofertas do dia!", ofertas_do_dia_path %></li>
                 <li><%= link_to "Todas as Ofertas", todas_ofertas_path %></li>
                 <li><%= link_to "Usuários", users_path %></li>
             <% end %>
