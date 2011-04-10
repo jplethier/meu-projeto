@@ -3,7 +3,8 @@ class RelationsController < ApplicationController
 
     def create
         user = User.find(params[:user_id])
-        @relation = user.usuarios_seguidos.build(:e_seguido => user)
+        @relation = current_user.usuarios_seguidos.build
+        @relation.e_seguido = user
         if @relation.save
             flash[:success] = "Operação efetuada com sucesso!"
         else
