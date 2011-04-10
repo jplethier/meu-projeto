@@ -11,7 +11,8 @@ MeuProjeto::Application.routes.draw do
     match '/novocadastro',         :to => 'users#novocadastro'
     match '/novaoferta',           :to => 'ofertas#novaoferta'
     match '/signout',              :to => 'sessions#destroy'
-    match '/ofertas_do_dia/:tipo', :to => 'pages#home'
+    match '/ofertas_do_dia',       :to => 'ofertas#ofertas_do_dia'
+    match '/ofertas_do_dia/:tipo', :to => 'ofertas#ofertas_do_dia'
     match '/todas_ofertas',        :to => 'ofertas#todas_ofertas'
     match '/todas_ofertas/:tipo',  :to => 'ofertas#todas_ofertas'
   

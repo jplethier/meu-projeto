@@ -1,8 +1,6 @@
     <nav class="round">
         <ul>
-            <!--
             <li><%= link_to "Página inicial", root_path %></li>
-            -->
             <% if not signed_in? %>
                 <li><%= form_for(:session, :url => sessions_path) do |f| %>
                     <li class="field"> <%= f.label :email %>  <%= f.text_field :email %></li>
@@ -11,6 +9,7 @@
                 <% end %></li>
             <% end %>
             <% if signed_in? %>
+                <li><%= link_to "Ofertas do dia!", ofertas_do_dia_path %></li>
                 <li><%= link_to "Perfil", current_user %></li>
                 <li><%= link_to "Cadastrar Oferta",  novaoferta_path %></li>
                 <li><%= link_to "Usuários", users_path %></li>

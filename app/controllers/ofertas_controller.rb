@@ -28,6 +28,14 @@ class OfertasController < ApplicationController
         end
     end
 
+    def ofertas_do_dia
+        if params[:tipo]
+            @ofertas = Oferta.ofertas_do_dia.por_tipo(params[:tipo])
+        else
+            @ofertas = Oferta.ofertas_do_dia
+        end
+    end
+
     def show
         @oferta = Oferta.find(params[:id])
         @title = @oferta.title + " - R$" + @oferta.price_mask.to_s
