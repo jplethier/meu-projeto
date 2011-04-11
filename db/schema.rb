@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 321110219121215) do
+ActiveRecord::Schema.define(:version => 321110219121214) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -27,13 +27,6 @@ ActiveRecord::Schema.define(:version => 321110219121215) do
     t.integer  "user_id"
     t.string   "link"
     t.string   "tipo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "relations", :force => true do |t|
-    t.integer  "segue"
-    t.integer  "e_seguido"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
