@@ -1,7 +1,16 @@
 MeuProjeto::Application.routes.draw do
 
-    resources :users
+  get "relationships/create"
+
+  get "relationships/destroy"
+
+    resources :users do
+        member do
+            get :following, :followers
+        end
+    end
     resources :sessions, :only => [:create, :destroy]
+    resources :relationships, :only => [:create, :destroy]
     resources :ofertas do
         resources :comments
     end
@@ -11,6 +20,7 @@ MeuProjeto::Application.routes.draw do
     match '/signout',              :to => 'sessions#destroy'
     match '/ofertas_do_dia',       :to => 'ofertas#ofertas_do_dia'
     match '/ofertas_do_dia/:tipo', :to => 'ofertas#ofertas_do_dia'
+    match '/home/:tipo',           :to => 'pages#home'
     match '/todas_ofertas',        :to => 'ofertas#todas_ofertas'
     match '/todas_ofertas/:tipo',  :to => 'ofertas#todas_ofertas'
   

@@ -1,5 +1,31 @@
 <% if signed_in? %>
-    Página Inicial
+<table>
+        <tr>
+            <td class="main">
+                <h1> Minhas ofertas e ofertas de usuários que eu sigo </h1>
+                <% if @ofertas.empty? %>
+                    <span>Não há nenhuma oferta cadastrada!</span>
+                <% else %>
+                    <table class="ofertas" summary="Ofertas">
+                        <%= render @ofertas %>
+                    </table>
+                <% end %>
+            </td>
+            <td class="sidebar round">
+                <strong><%= link_to "Bebidas", '/home/bebidas' %></strong><br/>
+                <strong><%= link_to "Beleza e Saúde", '/home/beleza e saude' %></strong><br/>
+                <strong><%= link_to "Celulares e Telefones", '/home/celulares e telefones' %></strong><br/>
+                <strong><%= link_to "DVDs e CDs", '/home/dvds e cds' %></strong><br/>
+                <strong><%= link_to "Eletrodomésticos", '/home/eletrodomesticos' %></strong><br/>
+                <strong><%= link_to "Eletrônicos", '/home/eletronicos' %></strong><br/>
+                <strong><%= link_to "Esportes e Lazer", '/home/esportes e lazer' %></strong><br/>
+                <strong><%= link_to "Informática", '/home/informatica' %></strong><br/>
+                <strong><%= link_to "Livros", '/home/livros' %></strong><br/>
+                <strong><%= link_to "Roupas e Calçados", '/home/roupas e calcados' %></strong><br/>
+                <strong><%= link_to "Viagens", '/home/viagens' %></strong><br/>
+            </td>
+        </tr>
+</table>
 <% else %>
         <h1>DealWit.Me</h1>
             <div class="round esquerda">

@@ -5,6 +5,17 @@
                 <%= gravatar_for @user %>
                 <%= @user.name %>
             </h1>
+            <br/>
+            <% unless current_user?(@user) %>
+                <div id="follow_form">
+                <% if current_user.following?(@user) %>
+                    <%= render 'unfollow' %>
+                <% else %>
+                    <%= render 'follow' %>
+                <% end %>
+                </div>
+                <br/>
+            <% end %>
             <% unless @user.ofertas.empty? %>
                 <table class="ofertas" summary="Minhas Ofertas">
                     <%= render @ofertas %>

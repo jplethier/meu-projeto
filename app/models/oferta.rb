@@ -22,6 +22,7 @@ class Oferta < ActiveRecord::Base
     default_scope :order     => 'ofertas.created_at DESC'
     scope :ofertas_do_dia,   where("created_at >= ?", Time.mktime(Time.now.year, Time.now.month, Time.now.day, 0, 0, 0))
     scope :por_tipo
+    scope :ofertas_por_usuario_ou_por_usuarios_seguidos, lambda { |user| seguidos_por(user) }
 
     def self.por_tipo(tipo)
         where("tipo = ?", tipo)        
@@ -41,6 +42,12 @@ class Oferta < ActiveRecord::Base
         
         def ignorarAcentosTipo
             self.tipo = self.tipo.downcase.mb_chars.normalize(:kd).gsub(/[^a-z0-9\s\._]/n, '').to_s
+        end
+
+        def self.seguidos_por(user)
+            followed_ids = %(SELECT followed_id FROM relationships
+                       WHERE follower_id = :user_id)
+            where("user_id IN (#{followed_ids}) OR user_id = :user_id", { :user_id => user })
         end
 
 end

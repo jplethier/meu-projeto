@@ -5,10 +5,17 @@ class User < ActiveRecord::Base
     attr_accessor :password
     attr_accessible :name, :email, :password, :password_confirmation
 
-    has_many :ofertas,              :dependent => :destroy
-    has_many :comments,             :dependent => :destroy
-    has_many :seguidores,           :dependent => :destroy, :class_name => "Relation", :foreign_key => "e_seguido"
-    has_many :usuarios_seguidos,    :dependent => :destroy, :class_name => "Relation", :foreign_key => "segue"
+    has_many :ofertas,                  :dependent => :destroy
+    has_many :comments,                 :dependent => :destroy
+    has_many :relationships,            :foreign_key => "follower_id",
+                                        :dependent => :destroy
+    has_many :following,                :through => :relationships, 
+                                        :source => :followed
+    has_many :reverse_relationships,    :foreign_key => "followed_id",
+                                        :class_name => "Relationship",
+                                        :dependent => :destroy
+    has_many :followers,                :through => :reverse_relationships
+    
 
     email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -38,8 +45,20 @@ class User < ActiveRecord::Base
         encrypted_password == encrypt(submitted_password)
     end
     
-    def seguir(user)
-        self.usuarios_seguidos.build(:e_seguido => user)
+    def following?(followed)
+        relationships.find_by_followed_id(followed)
+    end
+
+    def follow!(followed)
+        relationships.create!(:followed_id => followed.id)
+    end
+
+    def unfollow!(followed)
+        relationships.find_by_followed_id(followed).destroy
+    end
+
+    def feed
+        Oferta.ofertas_por_usuario_ou_por_usuarios_seguidos(self)
     end
     
     private
