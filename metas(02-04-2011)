@@ -6,7 +6,7 @@ desenvolvimento:
     colocar o form de cadastro na página inicial de login(FEITO)
     colocar link para direcionar ao site onde é alterada a foto(FEITO)
     melhorar a forma de exibir a data - dd/MM/yyyy(FEITO)
-    criar relaçao de amizade entre usuários
+    criar relaçao de amizade entre usuários(FEITO)
     usuário permanecer logado por 30min(FEITO)
     --
     criar algum filtro para busca de ofertas nas listagens de ofertas
