@@ -18,6 +18,15 @@
         <td class="sidebar round">
             <strong>Tipo</strong> <%= @oferta.tipo_string %><br />
             <strong>Link</strong> <%= link_to @oferta.link, @oferta.link, :target => "_blank" %>
+            <!-- AddToAny BEGIN -->
+            <a class="a2a_dd" href="http://www.addtoany.com/share_save?linkurl=www.dealwit.me&amp;linkname=DealWit.Me"><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share"/></a>
+            <script type="text/javascript">
+                var a2a_config = a2a_config || {};
+                a2a_config.linkname = "DealWit.Me";
+                a2a_config.linkurl = "www.dealwit.me";
+            </script>
+            <script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+            <!-- AddToAny END -->
         </td>
     </tr>
 </table>
