@@ -1,6 +1,6 @@
     <nav class="round">
         <ul>
-            <% if signed_in? %>
+            <% if user_signed_in? %>
                 <li><%= current_user.email %></li>
                 <li><%= link_to "Configurações", edit_user_path(current_user) %></li>
                 <li><%= link_to "Sair", signout_path, :method => :delete %></li>

@@ -2,7 +2,7 @@
 class UsersController < ApplicationController
 
     before_filter :correct_user, :only => [:edit, :update]
-    before_filter :authenticate, :only => [:edit, :update]
+    before_filter :authenticate_user!, :only => [:edit, :update, :show, :index]
 
     def edit
         @user = current_user

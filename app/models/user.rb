@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 require 'digest'
 class User < ActiveRecord::Base
+    # Include default devise modules. Others available are:
+    # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+    devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 
     attr_accessor :password
-    attr_accessible :name, :email, :password, :password_confirmation
+    attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
     has_many :ofertas,                  :dependent => :destroy
     has_many :comments,                 :dependent => :destroy

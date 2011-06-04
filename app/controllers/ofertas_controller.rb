@@ -1,6 +1,6 @@
 class OfertasController < ApplicationController
 
-    before_filter :authenticate, :only => [:create, :destroy, :novaoferta, :index]
+    before_filter :authenticate_user!, :only => [:create, :destroy, :novaoferta, :index]
 
     def novaoferta
         @oferta = Oferta.new

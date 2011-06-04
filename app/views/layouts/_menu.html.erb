@@ -1,14 +1,14 @@
     <nav class="round">
         <ul>
             <li><%= link_to "Página inicial", root_path %></li>
-            <% if not signed_in? %>
+            <% if not user_signed_in? %>
                 <li><%= form_for(:session, :url => sessions_path) do |f| %>
                     <li class="field"> <%= f.label :email %>  <%= f.text_field :email %></li>
                     <li class="field"> <%= f.label "Senha" %> <%= f.password_field :password %></li>
                     <li class="actions"> <%= f.submit "Login" %> </li>
                 <% end %></li>
             <% end %>
-            <% if signed_in? %>
+            <% if user_signed_in? %>
                 <li><%= link_to "Perfil", current_user %></li>
                 <li><%= link_to "Cadastrar Oferta",  novaoferta_path %></li>
                 <li><%= link_to "Ofertas do dia!", ofertas_do_dia_path %></li>

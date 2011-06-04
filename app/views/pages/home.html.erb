@@ -38,8 +38,8 @@
             </div>
             <div class="round direita">
                 <h1>Cadastre-se Aqui</h1>
-                <%= form_for(@user) do |f| %>
-                    <%= render 'shared/error_messages', :object => f.object %>
+                <%= form_for(:user, :as => :user, :url => registration_path(:user)) do |f| %>
+                    <!--%= render 'shared/error_messages', :object => f.object %-->
                     <div class="field">
                         <%= f.label :name %><br/>
                         <%= f.text_field :name %>

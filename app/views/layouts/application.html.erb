@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="container">
-            <% if signed_in? %>
+            <% if user_signed_in? %>
                 <%= render 'layouts/header' %><br/><br/> 
             <% end %>
             <%= link_to logo, root_path %>
@@ -18,7 +18,7 @@
                 <% flash.each do |key, value| %>
                     <%= content_tag(:div, value, :class => "flash #{key}") %>
                 <% end %>
-                <% if signed_in? %>
+                <% if user_signed_in? %>
                     <%= link_to "Viu uma nova Oferta? Compartilhe ela clicando aqui", novaoferta_path %><br/>
                 <% end %>
                 <%= yield %>

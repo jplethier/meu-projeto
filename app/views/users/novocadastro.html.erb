@@ -1,24 +1,16 @@
 <h1>Novo Cadastro</h1>
-<%= form_for(@user) do |f| %>
-    <%= render 'shared/error_messages', :object => f.object %>
-    <div class="field">
-        <%= f.label :name %><br/>
-        <%= f.text_field :name %>
-    </div>
-    <div class="field">
-        <%= f.label :email %><br/>
-        <%= f.text_field :email %>
-    </div>
-    <div class="field">
-        <%= f.label :password %><br/>
-        <%= f.password_field :password %>
-    </div>
-    <div class="field">
-        <%= f.label :password_confirmation %><br/>
-        <%= f.password_field :password_confirmation %>
-    </div>
-    <div class="actions">
-        <%= f.submit "Confirmar" %>
-    </div>
-<% end %>
+<%= form_for("user", :url => user_registration_path) do |f| %>
+    <p><%= f.label :name %><br/>
+    <%= f.text_field :name %></p>
 
+    <p><%= f.label :email %><br />
+    <%= f.email_field :email %></p>
+
+    <p><%= f.label :password %><br />
+    <%= f.password_field :password %></p>
+
+    <p><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %></p>
+
+    <p><%= f.submit "Confirmar" %></p>
+<% end %>

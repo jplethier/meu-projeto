@@ -1,8 +1,10 @@
 MeuProjeto::Application.routes.draw do
 
-  get "relationships/create"
+    devise_for :users
 
-  get "relationships/destroy"
+    get "relationships/create"
+
+    get "relationships/destroy"
 
     resources :users do
         member do

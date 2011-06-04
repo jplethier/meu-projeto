@@ -7,6 +7,7 @@ gem 'will_paginate',        '3.0.pre2'
 gem 'kaminari'
 gem 'ezcrypto'
 gem 'json'
+gem 'devise'
 
 group :development do
   gem 'rspec-rails',        '2.3.0'
